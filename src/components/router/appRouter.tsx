@@ -1,7 +1,7 @@
 import { lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ErrorBoundary from '../components/common/ErrorBoundary'
-import MainLayout from '../layouts/MainLayout'
+import Layout from '../layouts/Layout.tsx'
 
 const Home = lazy(() => import('../pages/Home'))
 const Projects = lazy(() => import('../pages/Projects'))
@@ -15,9 +15,9 @@ const ThreeD = lazy(() => import('../pages/3d.tsx'))
 function RouterWrapper({ component: Component }) {
   return (
     <ErrorBoundary>
-      <MainLayout>
+      <Layout>
         <Component />
-      </MainLayout>
+      </Layout>
     </ErrorBoundary>
   )
 }

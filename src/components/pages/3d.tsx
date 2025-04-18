@@ -2,7 +2,6 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, softShadows } from '@react-three/drei'
 import { useRef, Suspense, useState, useEffect } from 'react'
 import { Mesh } from 'three'
-import { ErrorBoundary } from 'react-error-boundary'
 import Loader from '../components/common/Loader'
 
 softShadows()
@@ -19,7 +18,7 @@ function ErrorFallback() {
 }
 
 function AvatarModel() {
-  const modelRef = useRef<Mesh>(null)
+          const modelRef = useRef<Mesh>(null)
   
   useFrame((state, delta) => {
     if (modelRef.current) {
@@ -93,4 +92,5 @@ function Scene() {
       </div>
     </ErrorBoundary>
   )
+}
 }
