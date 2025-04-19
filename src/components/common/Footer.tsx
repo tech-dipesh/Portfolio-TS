@@ -13,10 +13,10 @@ const links = [
 ]
 
 const socials = [
-  { icon: githubIcon, url: '#' },
-  { icon: linkedinIcon, url: '#' },
-  { icon: twitterIcon, url: '#' },
-  { icon: discordIcon, url: '#' },
+  { icon: githubIcon, url: 'https://github.com' },
+  { icon: linkedinIcon, url: 'https://linkedin.com' },
+  { icon: twitterIcon, url: 'https://twitter.com' },
+  { icon: discordIcon, url: 'https://discord.com' },
 ]
 
 export default function Footer() {
