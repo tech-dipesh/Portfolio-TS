@@ -14,9 +14,9 @@ export default function TypingHero() {
       index++;
       if (index === fullText.length) {
         clearInterval(typingInterval);
-        setTimeout(() => setShowLinkedIn(true), 800); // Pause before showing LinkedIn icon
+        setTimeout(() => setShowLinkedIn(true), 800);
       }
-    }, 70); // Typing speed
+    }, 70);
 
     return () => clearInterval(typingInterval);
   }, []);
@@ -25,7 +25,7 @@ export default function TypingHero() {
     <section className="flex flex-col items-center justify-center h-[60vh] px-4 text-center">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
         {displayedText}
-        <span className="animate-blink text-[8a2be2]">|</span>
+        <span className="animate-blink text-[#8a2be2]">|</span>
       </h1>
 
       {showLinkedIn && (

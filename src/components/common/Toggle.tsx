@@ -25,7 +25,11 @@ export default function DarkModeToggle() {
       onClick={() => setDark(prev => !prev)}
       className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3498db]"
     >
-      {dark ? <Sun className="h-6 w-6 text-yellow-300" /> : <Moon className="h-6 w-6 text-gray-800" />}
+      {dark ? (
+        <Sun className="h-6 w-6 text-[#3498db]" />
+      ) : (
+        <Moon className="h-6 w-6 text-[#30339d]" />
+      )}
     </button>
   )
 }

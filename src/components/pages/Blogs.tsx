@@ -1,13 +1,23 @@
-import { Blogs } from '../data/Blogs.tsx';
+import { useMemo, useState } from 'react';
+import { Blogs as blogData } from '../data/Blogs.tsx';
+interface Blog {
+  title: string;
+  content: string;
+  description: string;
+  author: string;
+  date: string;
+  thumbnail: string;
+  tags: string[];
+}
 
 export default function Blogs() {
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState('All');
-  const tags = ['All', ...new Set(blogs.flatMap((b) => b.tags))];
+  const tags = ['All', ...new Set(blogData.flatMap((b:Blog) => b.tags))];
 
   const filtered = useMemo(
     () =>
-      blogs.filter(
+      blogData.filter(
         (b) =>
           (activeTag === 'All' || b.tags.includes(activeTag)) &&
           b.title.toLowerCase().includes(search.toLowerCase())

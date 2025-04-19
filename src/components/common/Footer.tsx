@@ -1,47 +1,67 @@
-import useVisitorCounter from "../hooks/visitCount.tsx"
-import githubIcon from '../../assets/icons/github.png'
-import linkedinIcon from '../../assets/icons/linkedin.svg'
-import twitterIcon from '../../assets/icons/twitter.svg'
-import discordIcon from '../../assets/icons/discord.svg'
+import { Link } from 'react-router-dom';
+import useVisitorCounter from "../hooks/visitCount.ts";
+import githubIcon from '../../assets/icons/github.png';
+import linkedinIcon from '../../assets/icons/linkedin.svg';
+import twitterIcon from '../../assets/icons/twitter.svg';
+import discordIcon from '../../assets/icons/discord.svg';
 
 const links = [
-  { name: 'Home', path: '/' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Resume', path: '/resume' },
-  { name: 'Gadgets', path: '/gadgets' },
-  { name: 'Contact', path: '/contact' },
-]
+  { name: 'Home', to: '/' },
+  { name: 'Projects', to: '/projects' },
+  { name: 'Resume', to: '/resume' },
+  { name: 'Gadgets', to: '/gadgets' },
+  { name: 'Contact', to: '/contact' },
+];
 
 const socials = [
-  { icon: githubIcon, url: 'https://github.com' },
-  { icon: linkedinIcon, url: 'https://linkedin.com' },
-  { icon: twitterIcon, url: 'https://twitter.com' },
-  { icon: discordIcon, url: 'https://discord.com' },
-]
+  { name: 'GitHub', icon: githubIcon, url: 'https://github.com' },
+  { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com' },
+  { name: 'Twitter', icon: twitterIcon, url: 'https://twitter.com' },
+  { name: 'Discord', icon: discordIcon, url: 'https://discord.com' },
+];
 
 export default function Footer() {
-  const visits = useVisitorCounter()
+  const visits = useVisitorCounter();
+
   return (
-    <footer className="sticky bottom-0 z-40 bg-white dark:bg-gray-900 shadow-inner">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-6">
-        <div className="flex space-x-4">
-          {links.map(link => (
-            <a key={link.path} href={link.path} className="text-gray-600 dark:text-gray-300 hover:text-[#3498db]">
+    <footer className="w-full bg-[#06063a] text-white py-6">
+      <div className="mx-auto max-w-4xl flex flex-col md:flex-row items-center justify-between px-6 space-y-4 md:space-y-0">
+        {/* Internal Links (client-side routing) */}
+        <nav className="flex space-x-4">
+          {links.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="hover:text-[#3498db] transition"
+            >
               {link.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Social Icons (external links) */}
+        <div className="flex space-x-4">
+          {socials.map((s) => (
+            <a
+              key={s.name}
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={s.icon}
+                alt={s.name}
+                className="h-6 w-6 hover:opacity-75 transition"
+              />
             </a>
           ))}
         </div>
-        <div className="flex space-x-4 my-2 md:my-0">
-          {socials.map((s, i) => (
-            <a key={i} href={s.url} target="_blank" rel="noreferrer">
-              <img src={s.icon} alt="" className="h-6 w-6 hover:opacity-75"/>
-            </a>
-          ))}
-        </div>
-        <div className="text-gray-500 dark:text-gray-400 text-sm">
+
+        {/* Visitor Counter */}
+        <div className="text-sm">
           Visitor Count: {visits}
         </div>
       </div>
     </footer>
-  )
+  );
 }

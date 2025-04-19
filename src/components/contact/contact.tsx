@@ -1,20 +1,50 @@
-import { useForm } from 'react-hook-form';
+'use client';
+
+import { useForm, SubmitHandler } from 'react-hook-form';
 import { AlertCircle } from 'lucide-react';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
+
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 export default function Contact() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+    reset,
+  } = useForm<FormData>();
 
-  const onSubmit = (data) => {
-    // Handle form submission logic here
-    toast.success('Message sent successfully!');
-    // Redirect to homepage
-    window.location.href = '/';
+  const navigate = useNavigate();
+
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/dipeshgautambusiness+portfolio@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success('Message sent successfully!');
+        reset();
+        setTimeout(() => {
+          navigate('/');
+        }, 2000);
+      } else {
+        toast.error('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      toast.error('An error occurred. Please try again.');
+    }
   };
 
   return (

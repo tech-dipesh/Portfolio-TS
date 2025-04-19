@@ -1,4 +1,3 @@
-import React from 'react';
 import meImage from '@/assets/images/me.png';
 
 export default function About() {

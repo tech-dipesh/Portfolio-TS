@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import DarkModeToggle from './Toggle.tsx'
-import MobileDrawer from '../drawer/Mobile.tsx'
-import logo from '../../assets/images/logo.png'
+import { NavLink, Link } from 'react-router-dom'
+import DarkModeToggle from './Toggle'
+import MobileDrawer from '../drawer/Mobile'
+import logo from '../../assets/images/me.png'
 
 const links = [
   { name: 'Home', path: '/' },
@@ -15,17 +15,19 @@ const links = [
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false)
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
-      <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <NavLink to="/"><img src={logo} alt="Logo" className="h-10"/></NavLink>
+    <header className="w-full bg-white dark:bg-gray-900 shadow-md px-6 py-4">
+      <div className="flex items-center justify-between">
+        <Link to="/">
+          <img src={logo} alt="Logo" className="h-10" />
+        </Link>
         <nav className="hidden md:flex space-x-6">
           {links.map(link => (
             <NavLink
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `text-gray-700 dark:text-gray-200 hover:text-[#3498db] dark:hover:text-[#3498db] ${
-                  isActive ? 'font-bold border-b-2 border-[#30339d]' : ''
+                `text-gray-700 dark:text-gray-200 hover:text-[#3498db] transition ${
+                  isActive ? 'font-bold border-b-2 border-[#8a2be2]' : ''
                 }`
               }
             >
@@ -36,7 +38,13 @@ export default function Navbar() {
         <div className="flex items-center space-x-4">
           <DarkModeToggle />
           <button className="md:hidden" onClick={() => setDrawerOpen(true)}>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6 text-gray-700 dark:text-gray-200"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
@@ -44,5 +52,5 @@ export default function Navbar() {
       </div>
       <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} links={links} />
     </header>
-  )
+)
 }

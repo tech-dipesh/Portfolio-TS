@@ -1,11 +1,11 @@
-import { Gadgets } from '../data/Gadget.tsx';
+import { Gadgets as Gadget } from '../data/Gadget.tsx';
 
 export default function Gadgets() {
   return (
     <main className="min-h-screen bg-[#06063a] text-white px-6 py-20">
       <h2 className="text-3xl font-bold text-[#8a2be2] mb-8">Gadgets I Use</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {Gadgets.map((g, idx) => (
+        {Gadget.map((g, idx) => (
           <div
             key={idx}
             className="bg-[#30339d] p-6 rounded-xl shadow-lg hover:shadow-2xl transition"

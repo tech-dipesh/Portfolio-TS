@@ -9,7 +9,7 @@ function App() {
       {/* Main Application Router */}
       <AppRouter />
       
-      {/* Global Toast Notifications */}
+      {/* this is the toast message */}
       <ToastContainer
         position="bottom-right"
         autoClose={5000}
