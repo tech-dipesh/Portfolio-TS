@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import useVisitorCounter from "../hooks/visitCount.ts";
-import githubIcon from '../../assets/icons/github.png';
-import linkedinIcon from '../../assets/icons/linkedin.svg';
-import twitterIcon from '../../assets/icons/twitter.svg';
-import discordIcon from '../../assets/icons/discord.svg';
+
+import Github from "../../assets/skills/github.png";
+import linkedinIcon from '../../assets/skills/linkedin.png';
+import twitterIcon from '../../assets/skills/twitter.png';
+import discordIcon from '../../assets/skills/discord.png';
 
 const links = [
   { name: 'Home', to: '/' },
@@ -14,7 +15,7 @@ const links = [
 ];
 
 const socials = [
-  { name: 'GitHub', icon: githubIcon, url: 'https://github.com' },
+  { name: 'GitHub', icon: Github, url: 'https://github.com' },
   { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com' },
   { name: 'Twitter', icon: twitterIcon, url: 'https://twitter.com' },
   { name: 'Discord', icon: discordIcon, url: 'https://discord.com' },
