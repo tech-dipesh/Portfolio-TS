@@ -11,9 +11,11 @@ const links = [
   { name: 'Projects', to: '/projects' },
   { name: 'Resume', to: '/resume' },
   { name: 'Gadgets', to: '/gadgets' },
-  { name: 'Contact', to: '/contact' },
+  { name: 'Skills', to: '/skills' },
+  { name: 'Blogs', to: '/blogs' },
+  { name: 'Open Source', to: '/open-source' },
   { name: 'Command', to: '/3d' },
-  { name: 'about', to: '/contact' },
+  { name: 'about', to: '/about' },
   { name: 'Contact', to: '/contact' },
 ];
 

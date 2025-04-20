@@ -15,6 +15,7 @@ const OpenSource = lazy(() => import('../pages/openSource.tsx'));
 const ThreeD = lazy(() => import('../pages/3d'));
 const CommandPage = lazy(() => import('../pages/Command'));
 const About = lazy(() => import('../pages/About'));
+const AllSkillsPage=lazy(()=>import('../pages/skills.tsx'))
 
 function RouterWrapper({ component: Component, title }: { component: React.LazyExoticComponent<() => JSX.Element>, title: string }) {
   return (
@@ -39,6 +40,7 @@ export default function AppRouter() {
         <Route path="/projects" element={<RouterWrapper component={Projects} title="Projects" />} />
         <Route path="/resume" element={<RouterWrapper component={Resume} title="Resume" />} />
         <Route path="/contact" element={<RouterWrapper component={Contact} title="Contact" />} />
+        <Route path="/skills" element={<RouterWrapper component={AllSkillsPage} title="All Skills Page" />} />
         <Route path="/gadgets" element={<RouterWrapper component={Gadgets} title="Gadgets" />} />
         <Route path="/blogs" element={<RouterWrapper component={Blogs} title="Blogs" />} />
         <Route path="/open-source" element={<RouterWrapper component={OpenSource} title="Open Source" />} />
