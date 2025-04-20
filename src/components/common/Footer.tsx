@@ -14,9 +14,10 @@ const links = [
   { name: 'Skills', to: '/skills' },
   { name: 'Blogs', to: '/blogs' },
   { name: 'Open Source', to: '/open-source' },
-  { name: 'Command', to: '/3d' },
+  { name: 'Command', to: '/command' },
   { name: 'about', to: '/about' },
   { name: 'Contact', to: '/contact' },
+  { name: '3D', to: '/3d' },
 ];
 
 const socials = [

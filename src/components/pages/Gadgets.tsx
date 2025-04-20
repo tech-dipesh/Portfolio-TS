@@ -1,6 +1,3 @@
-import { Laptop } from '../../assets/gadgets/laptop.png';
-import { Mobile } from '../../assets/gadgets/mobile.webp';
-import { earbud } from '../../assets/gadgets/earbud.webp';
 import { Gadgets as Gadget } from '../data/Gadget.ts';
 
 export default function Gadgets() {

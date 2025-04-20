@@ -1,3 +1,4 @@
+import Api from "../../assets/skills/api.webp"
 export const Blogs = [
   {
     title: 'What is a RESTful API & Why Does It Matter?',
@@ -7,7 +8,7 @@ export const Blogs = [
       'RESTful APIs are a way for systems to communicate over HTTP using standard methods like GET, POST, PUT, and DELETE...',
     author: 'Dipendra Sharma',
     date: '2025-02-25',
-    thumbnail: '/assets/blogs/restapi.png',
+    thumbnail: Api,
     tags: ['Node.js', 'Express', 'API', 'REST'],
   },
 ];

@@ -23,7 +23,8 @@ export default function Blogs() {
           b.title.toLowerCase().includes(search.toLowerCase())
       ),
     [search, activeTag]
-  ); // useMemo for performance :contentReference[oaicite:2]{index=2}
+  ); 
+  // useMemo for performance :contentReference[oaicite:2]{index=2}
 
   return (
     <main className="min-h-screen bg-[#06063a] text-white px-6 py-20">

@@ -18,7 +18,7 @@ import GitHub from "../../assets/skills/github.png";
 import Vite from "../../assets/skills/vite.png";
 import Notion from "../../assets/skills/notion.png";
 import Figma from "../../assets/skills/figma.png";
-import API from "../../assets/skills/api.png";
+import API from "../../assets/skills/api.webp";
 import Npm from "../../assets/skills/npm.png";
 import C from "../../assets/skills/c.webp";
 import Vercel from "../../assets/skills/vercel.webp";

@@ -14,7 +14,7 @@ import Git from "../../assets/skills/git.png";
 import GitHub from "../../assets/skills/github.png";
 import Notion from "../../assets/skills/notion.png";
 import Figma from "../../assets/skills/figma.png";
-import API from "../../assets/skills/api.png";
+import API from "../../assets/skills/api.webp";
 import { useState, useEffect, useRef } from "react";
 const SkillsTestimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
