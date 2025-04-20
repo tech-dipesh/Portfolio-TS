@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import 'react-toastify/dist/ReactToastify.css'
+import Footer from '../common/Footer'
 
 type FormData = {
   name: string
@@ -43,7 +44,7 @@ export default function Contact() {
     'w-full p-3 bg-[#212154] text-white rounded-lg border border-[#3498db] focus:outline-none focus:ring-2 focus:ring-[#8a2be2]'
 
   return (
-    <div className="relative min-h-screen bg-[#06063a] flex items-center justify-center px-4 overflow-hidden">
+    <div className="flex items-center justify-center min-h-screen w-full bg-[#06063a] px-4 py-12">
       <div className="absolute inset-0 flex">
         <div className="w-1/2 bg-gradient-to-br from-purple-900 via-[#06063a] to-transparent opacity-30"></div>
         <div className="w-1/2 bg-gradient-to-bl from-purple-900 via-[#06063a] to-transparent opacity-30"></div>
@@ -53,7 +54,7 @@ export default function Contact() {
         onSubmit={handleSubmit(onSubmit)}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="relative z-10 w-full max-w-3xl bg-[#30339d] p-10 rounded-xl shadow-xl"
+        className="relative z-10 w-full max-w-4xl bg-[#30339d] p-8 md:p-10 rounded-xl shadow-xl"
       >
         <h2 className="text-4xl font-bold text-[#8a2be2] mb-2">Get in Touch</h2>
         <p className="text-white mb-8">I'd love to hear from you! Send me a message below.</p>
@@ -117,7 +118,7 @@ export default function Contact() {
           )}
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <button
             type="button"
             onClick={() => navigate('/')}
@@ -143,6 +144,7 @@ export default function Contact() {
           </button>
         </div>
       </motion.form>
+      <Footer/>
     </div>
   )
 }
