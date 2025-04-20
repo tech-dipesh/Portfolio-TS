@@ -26,6 +26,7 @@ const Command: React.FC<CommandProps> = () => {
     { command: 'resume', description: 'View my professional resume' },
     { command: 'gadgets', description: 'Tech tools I use daily' },
     { command: 'blogs', description: 'Read my technical blogs' },
+    { command: 'command', description: 'Go to command page' },
     { command: 'clear', description: 'Clears the terminal screen' },
   ];
 
@@ -176,7 +177,7 @@ const Command: React.FC<CommandProps> = () => {
   };
 
   return (
-    <div className="terminal-container mb-20" onClick={focusInput}>
+    <div className="terminal-container w-full mb-20" onClick={focusInput}>
       <pre className="ascii-name">
 {`    ██████  ██ ██████  ███████ ███████ ██   ██                              
     ██   ██ ██ ██   ██ ██      ██      ██   ██                              

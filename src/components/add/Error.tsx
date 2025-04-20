@@ -1,7 +1,7 @@
 import { Component, ReactNode } from 'react';
 import Navbar from '../common/navBar';
 import Footer from '../common/Footer';
-
+import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
 }
@@ -22,6 +22,7 @@ class ErrorBoundary extends Component<Props, State> {
       return <main>
         <Navbar/>
       <div className="text-center mt-10">Something went wrong.</div>
+      <button><Link to="/"> Go to Homepage</Link></button>
       <Footer/>
       </main>;
     }

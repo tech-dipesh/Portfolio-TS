@@ -6,7 +6,8 @@ import Command from '../add/Command';
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#06063a] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-20 mr-200">
+    <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between">
+      <div className="md:w-1/2">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -26,10 +27,18 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
           className="mt-6 inline-block hover:opacity-80"
-        >
+          >
           <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8" />
         </motion.a>
-      <img src={Me} className='h-2xl w-2xl right-20 top-20' alt="https://static.vecteezy.com/system/resources/previews/029/711/176/non_2x/developer-with-ai-generated-free-png.png" />
+          </div>
+      {/* <img src={Me} className='h-2xl w-2xl right-20 top-20' alt="https://static.vecteezy.com/system/resources/previews/029/711/176/non_2x/developer-with-ai-generated-free-png.png" /> */}
+       <div className="md:w-1/2 mt-8 md:mt-0">
+      <img 
+        src={Me} 
+        className="w-full max-w-xl" 
+        alt="Developer Illustration" 
+      />
+    </div>
       </div>
       <Command/>
       <SkillsTestimonials/>
