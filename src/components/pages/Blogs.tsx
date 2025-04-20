@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Blogs as blogData } from '../data/Blogs.tsx';
+import { Blogs as blogData } from '../data/Blogs.ts';
 interface Blog {
   title: string;
   content: string;

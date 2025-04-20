@@ -26,8 +26,8 @@ export default function Navbar() {
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `text-gray-700 dark:text-gray-200 hover:text-[#3498db] transition ${
-                  isActive ? 'font-bold border-b-2 border-[#8a2be2]' : ''
+                `text-gray-700 dark:text-gray-200 hover:text-[#3498db] cursor-pointer transition ${
+                  isActive ? 'font-bold cursor-pointer border-b-2 border-[#8a2be2]' : ''
                 }`
               }
             >

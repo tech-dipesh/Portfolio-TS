@@ -1,4 +1,6 @@
 import { Component, ReactNode } from 'react';
+import Navbar from '../common/navBar';
+import Footer from '../common/Footer';
 
 interface Props {
   children: ReactNode;
@@ -17,7 +19,11 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      return <div className="text-center mt-10">Something went wrong.</div>;
+      return <main>
+        <Navbar/>
+      <div className="text-center mt-10">Something went wrong.</div>
+      <Footer/>
+      </main>;
     }
 
     return this.props.children;

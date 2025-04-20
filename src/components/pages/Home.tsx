@@ -29,7 +29,7 @@ export default function Home() {
         >
           <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8" />
         </motion.a>
-      <img src={Me} className='h-2xl w-2xl absolute right-20 top-20' alt="https://static.vecteezy.com/system/resources/previews/029/711/176/non_2x/developer-with-ai-generated-free-png.png" />
+      <img src={Me} className='h-2xl w-2xl right-20 top-20' alt="https://static.vecteezy.com/system/resources/previews/029/711/176/non_2x/developer-with-ai-generated-free-png.png" />
       </div>
       <Command/>
       <SkillsTestimonials/>

@@ -1,6 +1,6 @@
 import { JSX, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Error from '../add/error.tsx';
+import Error from '../add/Error.tsx';
 import Layout from '../layouts/Layout';
 import Loader from '../add/Loader.tsx';
 import NotFound from '../add/notfound.tsx';
@@ -13,6 +13,7 @@ const Gadgets = lazy(() => import('../pages/Gadgets'));
 const Blogs = lazy(() => import('../pages/Blogs'));
 const OpenSource = lazy(() => import('../pages/openSource.tsx'));
 const ThreeD = lazy(() => import('../pages/3d'));
+const About = lazy(() => import('../pages/About'));
 
 function RouterWrapper({ component: Component, title }: { component: React.LazyExoticComponent<() => JSX.Element>, title: string }) {
   return (
@@ -41,6 +42,7 @@ export default function AppRouter() {
         <Route path="/blogs" element={<RouterWrapper component={Blogs} title="Blogs" />} />
         <Route path="/open-source" element={<RouterWrapper component={OpenSource} title="Open Source" />} />
         <Route path="/3d" element={<RouterWrapper component={ThreeD} title="3D" />} />
+        <Route path="/about" element={<RouterWrapper component={About} title="About Page" />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
