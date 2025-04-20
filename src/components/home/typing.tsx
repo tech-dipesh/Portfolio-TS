@@ -1,22 +1,23 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import linkedinIcon from '../../assets/icons/linkedin.png';
+import linkedinIcon from '../../assets/skills/linkedin.png';
 
 export default function TypingHero() {
   const fullText = "Hi, I'm Dipesh Sharma – Full Stack Developer";
   const [displayedText, setDisplayedText] = useState('');
-  const [showLinkedIn, setShowLinkedIn] = useState(false);
+  const [typingComplete, setTypingComplete] = useState(false);
 
   useEffect(() => {
     let index = 0;
     const typingInterval = setInterval(() => {
-      setDisplayedText((prev) => prev + fullText.charAt(index));
-      index++;
-      if (index === fullText.length) {
+      if (index <= fullText.length) {
+        setDisplayedText(fullText.substring(0, index));
+        index++;
+      } else {
         clearInterval(typingInterval);
-        setTimeout(() => setShowLinkedIn(true), 800);
+        setTypingComplete(true);
       }
-    }, 70);
+    }, 100); // Slightly slower for better visibility
 
     return () => clearInterval(typingInterval);
   }, []);
@@ -25,23 +26,23 @@ export default function TypingHero() {
     <section className="flex flex-col items-center justify-center h-[60vh] px-4 text-center">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
         {displayedText}
-        <span className="animate-blink text-[#8a2be2]">|</span>
+        {!typingComplete && <span className="animate-blink text-[#8a2be2]">|</span>}
       </h1>
 
-      {showLinkedIn && (
+      {typingComplete && (
         <motion.a
           href="https://www.linkedin.com/in/your-profile"
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ duration: 0.5 }}
           className="mt-6"
         >
           <img
             src={linkedinIcon}
             alt="LinkedIn"
-            className="w-6 h-6 sm:w-8 sm:h-8"
+            className="w-8 h-8 sm:w-10 sm:h-10 hover:scale-110 transition-transform"
           />
         </motion.a>
       )}

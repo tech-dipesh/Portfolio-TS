@@ -8,7 +8,7 @@ import Helmet from "react-helmet"
 const Home = lazy(() => import('../pages/Home'));
 const Projects = lazy(() => import('../pages/Projects'));
 const Resume = lazy(() => import('../pages/Resume'));
-const Contact = lazy(() => import('../pages/Contact'));
+const Contact = lazy(() => import('../contact/contact.tsx'));
 const Gadgets = lazy(() => import('../pages/Gadgets'));
 const Blogs = lazy(() => import('../pages/Blogs'));
 const OpenSource = lazy(() => import('../pages/openSource.tsx'));

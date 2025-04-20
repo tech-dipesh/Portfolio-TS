@@ -1,23 +1,40 @@
 import { Link } from 'react-router-dom';
 import useVisitorCounter from "../hooks/visitCount.ts";
+import { motion } from 'framer-motion';
 
 import Github from "../../assets/skills/github.png";
 import linkedinIcon from '../../assets/skills/linkedin.png';
 import twitterIcon from '../../assets/skills/twitter.png';
 import discordIcon from '../../assets/skills/discord.png';
 
-const links = [
-  { name: 'Home', to: '/' },
-  { name: 'Projects', to: '/projects' },
-  { name: 'Resume', to: '/resume' },
-  { name: 'Gadgets', to: '/gadgets' },
-  { name: 'Skills', to: '/skills' },
-  { name: 'Blogs', to: '/blogs' },
-  { name: 'Open Source', to: '/open-source' },
-  { name: 'Command', to: '/command' },
-  { name: 'about', to: '/about' },
-  { name: 'Contact', to: '/contact' },
-  { name: '3D', to: '/3d' },
+// Group links by category
+const linkGroups = [
+  {
+    title: "Main",
+    items: [
+      { name: 'Home', to: '/' },
+      { name: 'About', to: '/about' },
+      { name: 'Contact', to: '/contact' },
+      { name: 'Resume', to: '/resume' },
+    ]
+  },
+  {
+    title: "Projects",
+    items: [
+      { name: 'All Projects', to: '/projects' },
+      { name: 'Open Source', to: '/open-source' },
+      { name: '3D', to: '/3d' },
+    ]
+  },
+  {
+    title: "Resources",
+    items: [
+      { name: 'Skills', to: '/skills' },
+      { name: 'Gadgets', to: '/gadgets' },
+      { name: 'Blogs', to: '/blogs' },
+      { name: 'Command', to: '/command' },
+    ]
+  }
 ];
 
 const socials = [
@@ -31,41 +48,69 @@ export default function Footer() {
   const visits = useVisitorCounter();
 
   return (
-    <footer className="w-full bg-[#06063a] text-white py-6">
-      <div className="mx-auto max-w-4xl flex flex-col md:flex-row items-center justify-between px-6 space-y-4 md:space-y-0">
-        <nav className="flex space-x-4">
-          {links.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className="hover:text-[#3498db] transition"
-            >
-              {link.name}
-            </Link>
+    <footer className="w-full bg-[#06063a] text-white py-12">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Link Groups */}
+          {linkGroups.map((group) => (
+            <div key={group.title}>
+              <h3 className="text-lg font-semibold mb-4 text-[#3498db]">{group.title}</h3>
+              <ul className="space-y-2">
+                {group.items.map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="hover:text-[#8a2be2] transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </nav>
 
-        {/* Social Icons (external links) */}
-        <div className="flex space-x-4">
-          {socials.map((s) => (
-            <a
-              key={s.name}
-              href={s.url}
-              target="_blank"
-              rel="noopener noreferrer"
+          {/* Social Media & Visitor Counter */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-[#3498db]">Connect</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {socials.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center hover:scale-105 transition-transform"
+                >
+                  <img
+                    src={social.icon}
+                    alt={social.name}
+                    className="h-6 w-6 mr-2"
+                  />
+                  <span className="text-sm">{social.name}</span>
+                </a>
+              ))}
+            </div>
+            
+            {/* Visitor Counter with Animation */}
+            <motion.div 
+              className="mt-6 p-3 bg-[#30339d] rounded-lg"
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              transition={{ 
+                repeat: Infinity, 
+                repeatType: "reverse", 
+                duration: 2 
+              }}
             >
-              <img
-                src={s.icon}
-                alt={s.name}
-                className="h-6 w-6 hover:opacity-75 transition"
-              />
-            </a>
-          ))}
+              <p className="text-sm font-medium">Total Visitors</p>
+              <p className="text-2xl font-bold text-[#8a2be2]">{visits.toLocaleString()}</p>
+            </motion.div>
+          </div>
         </div>
-
-        {/* Visitor Counter */}
-        <div className="text-sm">
-          Visitor Count: {visits}
+        
+        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+          <p>© {new Date().getFullYear()} Dipesh Sharma. All rights reserved.</p>
         </div>
       </div>
     </footer>
