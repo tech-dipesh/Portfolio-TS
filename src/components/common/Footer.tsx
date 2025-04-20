@@ -12,6 +12,9 @@ const links = [
   { name: 'Resume', to: '/resume' },
   { name: 'Gadgets', to: '/gadgets' },
   { name: 'Contact', to: '/contact' },
+  { name: 'Command', to: '/3d' },
+  { name: 'about', to: '/contact' },
+  { name: 'Contact', to: '/contact' },
 ];
 
 const socials = [
@@ -27,7 +30,6 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#06063a] text-white py-6">
       <div className="mx-auto max-w-4xl flex flex-col md:flex-row items-center justify-between px-6 space-y-4 md:space-y-0">
-        {/* Internal Links (client-side routing) */}
         <nav className="flex space-x-4">
           {links.map((link) => (
             <Link

@@ -22,8 +22,8 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen bg-[#30339d] text-white flex flex-col items-center justify-center px-4 py-20">
-      <h2 className="text-3xl font-bold text-[#3498db] mb-2">Get in Touch</h2>
+    <main className="min-h-[calc(100vh-160px)] w-full flex items-center justify-center"> 
+          <h2 className="text-3xl font-bold text-[#3498db] mb-2">Get in Touch</h2>
       <p className="mb-6 text-center">I love to get your feedback—fill out the form below!</p>
       <form
         onSubmit={handleSubmit(onSubmit)}
