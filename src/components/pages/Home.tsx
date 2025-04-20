@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import linkedinIcon from '../../assets/skills/linkedin.png';
-
+import SkillsTestimonials from '../add/Skills';
+import Me from "../../assets/images/developer-ai.webp"
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#06063a] text-white">
@@ -27,7 +28,9 @@ export default function Home() {
         >
           <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8" />
         </motion.a>
+      <img src={Me} className='h-2xl w-2xl absolute right-20 top-20' alt="https://static.vecteezy.com/system/resources/previews/029/711/176/non_2x/developer-with-ai-generated-free-png.png" />
       </div>
+      <SkillsTestimonials/>
     </main>
   );
 }
