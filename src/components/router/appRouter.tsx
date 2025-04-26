@@ -17,6 +17,7 @@ const CommandPage = lazy(() => import('../pages/Command'));
 const About = lazy(() => import('../pages/About'));
 const AllSkillsPage=lazy(()=>import('../pages/skills.tsx'))
 
+// this is the al routes which i've used on my entire project.
 function RouterWrapper({ component: Component, title }: { component: React.LazyExoticComponent<() => JSX.Element>, title: string }) {
   return (
     <Error>

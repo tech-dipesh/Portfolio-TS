@@ -6,10 +6,10 @@ import AppRouter from "./components/router/appRouter.tsx"
 function App() {
   return (
     <React.StrictMode>
-      {/* Main Application Router */}
+      {/* main application which on the app routes */}
       <AppRouter />
       
-      {/* this is the toast message */}
+      {/* i can create a new toast file but on the app.tsx which i see less content i have add here, in futuree i will move from here. */}
       <ToastContainer
         position="bottom-right"
         autoClose={5000}

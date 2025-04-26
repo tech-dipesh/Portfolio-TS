@@ -6,7 +6,7 @@ export default function About() {
       <h2 className="text-3xl font-bold text-[#30339d] hover:text-[#3498db] transition-colors">
         I love TypeScript
       </h2>
-
+{/* my about page little bit about mysef */}
       <div className="mt-6 text-lg leading-relaxed space-y-4">
         <p>👋 Hi! I’m Dipesh, a computer science student passionate about building apps from start to finish. Right now, I’m diving into tools like React, WebSocket, and TypeScript to create projects that solve real problems.</p>
         <p>💡 What I’m up to:</p>

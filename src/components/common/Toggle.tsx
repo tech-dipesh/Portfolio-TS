@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
 
 export default function DarkModeToggle() {
+  // i am trying give the user to flexiblity of the theme toggling i don't know am i successful or not , as i have only dark mode option.
   const [dark, setDark] = useState<boolean>(() => {
     const stored = localStorage.getItem('theme')
     return stored ? stored === 'dark' : true
   })
-
+// track the user current theme from the localstroare
   useEffect(() => {
     const root = window.document.documentElement
     if (dark) {

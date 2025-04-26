@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import linkedinIcon from '../../assets/skills/linkedin.png';
 
+// typing animation which i can do with the typing.js, but i want to use the customm animation
 export default function TypingHero() {
   const fullText = "Hi, I'm Dipesh Sharma – Full Stack Developer";
   const [displayedText, setDisplayedText] = useState('');
@@ -17,7 +18,8 @@ export default function TypingHero() {
         clearInterval(typingInterval);
         setTypingComplete(true);
       }
-    }, 100); // Slightly slower for better visibility
+    }, 100); 
+    // i can increase if i want the speed of the typing
 
     return () => clearInterval(typingInterval);
   }, []);
@@ -29,6 +31,7 @@ export default function TypingHero() {
         {!typingComplete && <span className="animate-blink text-[#8a2be2]">|</span>}
       </h1>
 
+{/* it will only work once when the my above content is loaded. */}
       {typingComplete && (
         <motion.a
           href="https://www.linkedin.com/in/your-profile"

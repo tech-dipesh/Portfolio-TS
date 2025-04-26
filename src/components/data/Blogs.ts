@@ -1,4 +1,5 @@
 import Api from "../../assets/skills/api.webp"
+// this is only a dummy listing of the blogs
 export const Blogs = [
   {
     title: 'What is a RESTful API & Why Does It Matter?',

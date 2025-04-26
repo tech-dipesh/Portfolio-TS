@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import './Command.css';
 
 interface CommandProps {
-  // Props can be extended as needed
+  // I will later add the props
 }
 
 const Command: React.FC<CommandProps> = () => {
+  // multiple states
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState<number>(0);
   const [commandOutput, setCommandOutput] = useState<JSX.Element[]>([]);
@@ -77,13 +78,13 @@ const Command: React.FC<CommandProps> = () => {
       setInputValue(commandHistory[newIndex]);
     }
     
-    // Handle Enter key to execute command
+    //also add the command of entering enter button. 
     else if (e.key === 'Enter') {
       e.preventDefault();
       executeCommand();
     }
     
-    // Handle Ctrl+K or Cmd+K to clear terminal
+    //i have add the command of control+k for clearing
     else if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
       e.preventDefault();
       clearTerminal();
@@ -109,6 +110,8 @@ const Command: React.FC<CommandProps> = () => {
     ]);
   };
 
+
+  // showing all commands
   const displayHelpSection = () => {
     const helpOutput = (
       <div key={`help-${commandHistory.length}`} className="command-result">
@@ -126,11 +129,13 @@ const Command: React.FC<CommandProps> = () => {
     setCommandOutput(prev => [...prev, helpOutput]);
   };
 
+
+  // Not found command
   const displayCommandNotFound = (command: string) => {
     const notFoundOutput = (
       <div key={`not-found-${commandHistory.length}`} className="command-result">
         <span className="command-not-found">{command}</span>
-        : command not found. Type 'help' to view a list of available commands.
+        : command not found. Type 'help' to view a list of available commands. (Dipesh)
       </div>
     );
     
@@ -163,7 +168,7 @@ const Command: React.FC<CommandProps> = () => {
         case 'resume':
         case 'gadgets':
         case 'blogs':
-          // Redirect to the corresponding route
+          //this will redirect to that routes
           navigate(`/${command}`);
           break;
         default:
@@ -175,9 +180,10 @@ const Command: React.FC<CommandProps> = () => {
       setInputValue('');
     }
   };
+  
 
   return (
-    <div className="terminal-container w-full mb-20" onClick={focusInput}>
+    <div className="terminal-container p-5  text-lightgray h-screen bg-gray-800 font-mono w-full mb-20" onClick={focusInput}>
       <pre className="ascii-name">
 {`    ██████  ██ ██████  ███████ ███████ ██   ██                              
     ██   ██ ██ ██   ██ ██      ██      ██   ██                              
@@ -196,7 +202,7 @@ const Command: React.FC<CommandProps> = () => {
       <div ref={outputRef} className="command-output-container">
         {commandOutput}
       </div>
-      
+      {/* showing what user put */}
       <div className="input-container">
         <label htmlFor="command" className="input-label">&gt;</label>
         <input

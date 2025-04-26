@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-
+// all reviews that i have got as of now.
   const testimonials = [
     {
       text: "\"Thank you Dipesh for the work that you provided. I'm happy to have worked with him - he's responsible, good with communication, and works to fulfill the task according to the buyer's requirement. Recommended.\"",
@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
   ];
 
 export default function AllTestimonial(){
+  // adding the state for the better stating of the page.
     const [activeIndex, setActiveIndex] = useState(0);
   
     useEffect(() => {
@@ -42,6 +43,7 @@ export default function AllTestimonial(){
                 width: `${testimonials.length * 100}%`
               }}
             >
+              {/* animation but not working with this way i have to remove the settimeout, */}
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}

@@ -11,7 +11,8 @@ type FormData = {
   email: string
   message: string
 }
-
+// using the react-hook-form for better form managment i have also use the formsubmit for sending the form detaild to mine
+// ## the issue i am facing of the not aliging the main navbar and footer content, 
 export default function Contact() {
   const {
     register,
@@ -28,6 +29,7 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(data)
       })
+      // it will convert the stringify which is not necessery to sending the data i can use the simple post method on the form method
       if (response.ok) {
         toast.success('Message sent successfully!')
         reset()
@@ -40,6 +42,7 @@ export default function Contact() {
     }
   }
 
+  // showing the error messagej
   const fieldStyle =
     'w-full p-3 bg-[#212154] text-white rounded-lg border border-[#3498db] focus:outline-none focus:ring-2 focus:ring-[#8a2be2]'
 
@@ -49,7 +52,7 @@ export default function Contact() {
         <div className="w-1/2 bg-gradient-to-br from-purple-900 via-[#06063a] to-transparent opacity-30"></div>
         <div className="w-1/2 bg-gradient-to-bl from-purple-900 via-[#06063a] to-transparent opacity-30"></div>
       </div>
-
+{/* used the form for the better animation */}
       <motion.form
         onSubmit={handleSubmit(onSubmit)}
         initial={{ opacity: 0, scale: 0.95 }}
@@ -67,9 +70,11 @@ export default function Contact() {
             className={fieldStyle}
             placeholder="Your name"
           />
+          {/* custom react-hook-form error message */}
           {errors.name && (
             <div className="flex items-center mt-2 text-red-400">
               <AlertCircle className="h-4 w-4 mr-2" />
+              {/* alertCircle is a icon */}
               <span className="text-sm">{errors.name.message}</span>
             </div>
           )}

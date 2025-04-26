@@ -5,6 +5,7 @@ import Me from "../../assets/images/developer-ai.webp"
 import Command from '../add/Command';
 import AllTestimonial from '../card/Testimonial';
 export default function Home() {
+  // my first page when user enter on my website
   return (
     <main className="min-h-screen bg-[#06063a] text-white">
     <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between">
@@ -32,6 +33,7 @@ export default function Home() {
           <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8" />
         </motion.a>
           </div>
+          {/* used the local file rather than online image which anytime can be deleted also the animation */}
       {/* <img src={Me} className='h-2xl w-2xl right-20 top-20' alt="https://static.vecteezy.com/system/resources/previews/029/711/176/non_2x/developer-with-ai-generated-free-png.png" /> */}
        <div className="md:w-1/2 mt-8 md:mt-0">
       <img 

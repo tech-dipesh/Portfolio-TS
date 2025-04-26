@@ -10,6 +10,7 @@ interface Blog {
   tags: string[];
 }
 
+// for importing the blogs, blogcard and blog data ll of here, and use the strict types for the ts,
 export default function Blogs() {
   const [search, setSearch] = useState('');
   const [activeTag, setActiveTag] = useState('All');
@@ -24,7 +25,7 @@ export default function Blogs() {
       ),
     [search, activeTag]
   ); 
-  // useMemo for performance :contentReference[oaicite:2]{index=2}
+  // use the usememo for only rerendering only search and active tags, this is the search filter.
 
   return (
     <main className="min-h-screen bg-[#06063a] text-white px-6 py-20">
@@ -60,6 +61,7 @@ export default function Blogs() {
             <img src={b.thumbnail} alt={b.title} className="w-full rounded mb-3" />
             <p className="text-gray-200 mb-2">
               {b.content.split(' ').slice(0, 15).join(' ')}...
+              {/* only the first 15 word showing with the slice method not splice  */}
             </p>
             <div className="flex justify-between text-sm text-gray-400">
               <span>By {b.author}</span>

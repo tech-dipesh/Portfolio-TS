@@ -1,4 +1,5 @@
 
+// I have add what types which we need for the showing all blogs
 export type Blog = {
   title: string;
   description: string;
@@ -6,6 +7,7 @@ export type Blog = {
   date: string;
 };
 
+// ind blogs
 export function BlogCard({
   title,
   description,

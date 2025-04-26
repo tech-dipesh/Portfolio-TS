@@ -1,4 +1,5 @@
 
+// ts types add, i 
 export type Gadget = {
   name: string;
   description: string;

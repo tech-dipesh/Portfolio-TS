@@ -7,7 +7,7 @@ import linkedinIcon from '../../assets/skills/linkedin.png';
 import twitterIcon from '../../assets/skills/twitter.png';
 import discordIcon from '../../assets/skills/discord.png';
 
-// Group links by category
+// gropuding the every category
 const linkGroups = [
   {
     title: "Main",
@@ -37,6 +37,7 @@ const linkGroups = [
   }
 ];
 
+// have to make the separate listing for the styling
 const socials = [
   { name: 'GitHub', icon: Github, url: 'https://github.com' },
   { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com' },
@@ -46,12 +47,11 @@ const socials = [
 
 export default function Footer() {
   const visits = useVisitorCounter();
-
+// showing the total visitor
   return (
     <footer className="w-full bg-[#06063a] text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Link Groups */}
           {linkGroups.map((group) => (
             <div key={group.title}>
               <h3 className="text-lg font-semibold mb-4 text-[#3498db]">{group.title}</h3>
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Social Media & Visitor Counter */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-[#3498db]">Connect</h3>
             <div className="grid grid-cols-2 gap-4">
@@ -91,8 +91,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            
-            {/* Visitor Counter with Animation */}
+            {/* i have add te infinity animation on thee total vistor  */}
             <motion.div 
               className="mt-6 p-3 bg-[#30339d] rounded-lg"
               initial={{ scale: 0.95 }}
@@ -104,6 +103,7 @@ export default function Footer() {
               }}
             >
               <p className="text-sm font-medium">Total Visitors</p>
+              {/* showing the total vistior based onr the localstorage tracking. */}
               <p className="text-2xl font-bold text-[#8a2be2]">{visits.toLocaleString()}</p>
             </motion.div>
           </div>

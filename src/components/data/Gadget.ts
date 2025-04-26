@@ -1,7 +1,7 @@
 import Laptop from '../../assets/gadgets/laptop.png';
 import Mobile  from '../../assets/gadgets/mobile.webp';
 import  Earbud  from '../../assets/gadgets/earbud.webp';
-
+// my gadggets i use on my daily life
 export const Gadgets = [
   {
     name: 'Acer ALG 15G52',

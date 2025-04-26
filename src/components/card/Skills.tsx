@@ -20,6 +20,7 @@ const SkillsTestimonials = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
+  // stored skilsl on the array, whiich i can access by foreach or map
   const skills = [
     { name: "JavaScript", percent: "92%", logo: Javascript },
     { name: "TypeScript", percent: "80%", logo: TypeScript },
@@ -41,6 +42,7 @@ const SkillsTestimonials = () => {
 
 
 
+  // if user slide down which need to animation for the user 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -52,7 +54,7 @@ const SkillsTestimonials = () => {
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
-
+// if user is disocnnect i can remove this later.
     return () => observer.disconnect();
   }, []);
 
@@ -91,6 +93,7 @@ const SkillsTestimonials = () => {
                     transitionDelay: `${index * 100 + 300}ms`,
                   }}
                 >
+                  {/* above one is for the custom animation for the each */}
                   <span className="text-sm float-right mr-2">
                     {skill.percent}
                   </span>

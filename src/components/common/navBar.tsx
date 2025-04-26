@@ -4,6 +4,7 @@ import DarkModeToggle from './Toggle'
 import MobileDrawer from '../drawer/Mobile'
 import logo from '../../assets/images/me.png'
 
+// same like footer
 const links = [
   { name: 'Home', path: '/' },
   { name: 'Projects', path: '/projects' },
@@ -21,6 +22,7 @@ export default function Navbar() {
           <img src={logo} alt="Logo" className="h-10" />
         </Link>
         <nav className="hidden md:flex space-x-6">
+          {/* i can use the normal ul li but i want to use the power of the dynamic stylying */}
           {links.map(link => (
             <NavLink
               key={link.path}
@@ -51,6 +53,7 @@ export default function Navbar() {
         </div>
       </div>
       <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} links={links} />
+        {/* this for the mobile specfiic which i'm not able to work properly. */}
     </header>
 )
 }

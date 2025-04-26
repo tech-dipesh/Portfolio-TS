@@ -4,6 +4,7 @@ import { ShieldAlert } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const NotFound = () => {
 
+  // for making the not found with addding the icon from the lucide-react
   return (
     <main className="min-h-screen flex flex-col">
       <Navbar />

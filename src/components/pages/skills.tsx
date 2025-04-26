@@ -32,7 +32,7 @@ const skillCategories = [
   "General",
   "DataBase",
 ];
-
+// all category on array and skilss on objedct of array.
 export const entireSkills = [
   { name: "TypeScript", category: "Frontend", logo: TypeScript },
   { name: "JavaScript", category: "Frontend", logo: Javascript },
@@ -60,14 +60,17 @@ export const entireSkills = [
 ];
 
 export default function AllSkillsPage() {
+  // in default showing all listing
   const [activeCategory, setActiveCategory] = useState("All");
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
+  // only showing that matched the category if user filter.
   const filteredSkills = entireSkills.filter((skill) =>
     activeCategory === "All" ? true : skill.category === activeCategory
   );
 
+  // hiding other category if user select on another category.
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -93,7 +96,7 @@ export default function AllSkillsPage() {
         >
           Skills:
         </motion.h2>
-
+{/* motion template */}
         <div className="flex flex-wrap gap-3 justify-center mb-16">
           {skillCategories.map((category) => (
             <button
@@ -133,7 +136,7 @@ export default function AllSkillsPage() {
           ))}
         </div>
 
-{/* it will divide each of one,  */}
+{/* show the form of the card rather than entire one line with the filter like above but with the filters */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

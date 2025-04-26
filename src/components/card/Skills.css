@@ -1,3 +1,4 @@
+/* for using the animation  */
 @keyframes pop-in {
   0% {
     opacity: 0;
@@ -57,3 +58,5 @@
 .animate-fade-in {
   animation: fade-in 0.8s ease-out forwards;
 }
+
+/* this page only for the animation don't necessery which i add this page */

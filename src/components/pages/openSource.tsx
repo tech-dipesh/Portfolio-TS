@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+// no content in opensourcee i am still beginner this is for the future page.
 export default function OpenSource() {
   return (
     <main className="min-h-screen bg-[#06063a] text-white flex flex-col items-center justify-center px-4">

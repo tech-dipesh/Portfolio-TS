@@ -1,5 +1,5 @@
 import { Gadgets as Gadget } from '../data/Gadget.ts';
-
+// using the gadgets total content as a page 
 export default function Gadgets() {
   return (
     <main className="min-h-screen bg-[#06063a] text-white px-6 py-20">

@@ -3,6 +3,7 @@ import AirBnB from "../../assets/images/airbnb.png"
 
 export default function Projects() {
   const projects = [
+    // the projects that i have buidl on the object of array form for the each travesring
     {
       name: 'Mega Project Listings',
       image: Daily,
