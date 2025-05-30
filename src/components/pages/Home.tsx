@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import linkedinIcon from '../../assets/skills/linkedin.png';
+import linkedinIcon from '../../assets/social-media/linkedin.png';
 import SkillsTestimonials from '../card/Skills';
 import Me from "../../assets/images/developer-ai.webp"
 import Command from '../add/Command';

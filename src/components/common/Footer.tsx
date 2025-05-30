@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import useVisitorCounter from "../hooks/visitCount.ts";
 import { motion } from 'framer-motion';
 
-import Github from "../../assets/skills/github.png";
-import linkedinIcon from '../../assets/skills/linkedin.png';
-import twitterIcon from '../../assets/skills/twitter.png';
-import discordIcon from '../../assets/skills/discord.png';
+import Github from "../../assets/social-media/github.png";
+import linkedinIcon from '../../assets/social-media/linkedin.png';
+import twitterIcon from '../../assets/social-media/twitter.png';
+import discordIcon from "../../assets/social-media/discord.png"
+import leetcodeIcon from "../../assets/social-media/leetcode.png"
 
 // gropuding the every category
 const linkGroups = [
