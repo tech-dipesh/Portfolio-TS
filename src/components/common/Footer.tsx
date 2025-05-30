@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Github from "../../assets/social-media/github.png";
 import linkedinIcon from '../../assets/social-media/linkedin.png';
 import twitterIcon from '../../assets/social-media/twitter.png';
-import discordIcon from "../../assets/social-media/discord.png"
+// import discordIcon from "../../assets/social-media/discord.png"
 import leetcodeIcon from "../../assets/social-media/leetcode.png"
 
 // gropuding the every category
@@ -40,12 +40,12 @@ const linkGroups = [
 
 // have to make the separate listing for the styling
 const socials = [
-  { name: 'GitHub', icon: Github, url: 'https://github.com' },
-  { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com' },
-  { name: 'Twitter', icon: twitterIcon, url: 'https://twitter.com' },
-  { name: 'Discord', icon: discordIcon, url: 'https://discord.com' },
+  { name: 'GitHub', icon: Github, url: 'https://github.com/tech-dipesh' },
+  { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com/tech-dipesh' },
+  { name: 'Twitter', icon: twitterIcon, url: 'https://x.com/tec_dipesh'},
+  // { name: 'Discord', icon: discordIcon, url: 'https://discord.com' },
+  { name: 'LeetCode', icon: leetcodeIcon, url: 'https://leetcode/u/tech-dipesh/' },
 ];
-
 export default function Footer() {
   const visits = useVisitorCounter();
 // showing the total visitor

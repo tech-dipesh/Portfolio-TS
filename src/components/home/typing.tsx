@@ -34,7 +34,7 @@ export default function TypingHero() {
 {/* it will only work once when the my above content is loaded. */}
       {typingComplete && (
         <motion.a
-          href="https://www.linkedin.com/in/your-profile"
+          href="https://www.linkedin.com/in/tech-dipesh"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}

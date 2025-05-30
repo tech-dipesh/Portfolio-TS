@@ -22,7 +22,7 @@ export default function Home() {
         </motion.div>
 
         <motion.a
-          href="https://www.linkedin.com/in/your-profile"
+          href="https://www.linkedin.com/in/tech-dipesh"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0 }}

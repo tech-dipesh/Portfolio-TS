@@ -11,7 +11,7 @@ import SocketIo from "../../assets/skills/socketio.png";
 import Cpp from "../../assets/skills/cpp.png";
 import MySql from "../../assets/skills/mysql.png";
 import Git from "../../assets/skills/git.png";
-import GitHub from "../../assets/skills/github.png";
+import GitHub from "../../assets/social-media/github.png";
 import Notion from "../../assets/skills/notion.png";
 import Figma from "../../assets/skills/figma.png";
 import API from "../../assets/skills/api.webp";
