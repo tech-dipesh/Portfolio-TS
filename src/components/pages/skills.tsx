@@ -14,7 +14,7 @@ import MySql from "../../assets/skills/mysql.png";
 import Tailwind from "../../assets/skills/tailwind.png";
 import Materialui from "../../assets/skills/materialui.png";
 import Git from "../../assets/skills/git.png";
-import GitHub from "../../assets/skills/github.png";
+import GitHub from "../../assets/social-media/github.png";
 import Vite from "../../assets/skills/vite.png";
 import Notion from "../../assets/skills/notion.png";
 import Figma from "../../assets/skills/figma.png";
