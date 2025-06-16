@@ -25,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return <main>
         <Navbar/>
-      <div className="text-center mt-10">Something went wrong.</div>
+      <div className="text-center mt-10">The error is from our site, sorry for the inconvenience.</div>
       <button><Link to="/"> Go to Homepage</Link></button>
       <Footer/>
       </main>;

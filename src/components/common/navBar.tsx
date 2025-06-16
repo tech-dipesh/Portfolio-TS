@@ -8,9 +8,10 @@ import logo from '../../assets/images/me.png'
 const links = [
   { name: 'Home', path: '/' },
   { name: 'Projects', path: '/projects' },
-  { name: 'Resume', path: '/resume' },
   { name: 'Gadgets', path: '/gadgets' },
   { name: 'Contact', path: '/contact' },
+  // { name: 'Resume', path: '/resume' },
+  { name: 'About', path: '/about' },
 ]
 
 export default function Navbar() {
