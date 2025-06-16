@@ -9,7 +9,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 export default function PdfViewer() {
   return (
-    <div className="w-full h-[calc(100vh-160px)]">
+    <div className="absolute w-full h-[calc(100vh-160px)]">
       <Document file="/resume.pdf">
         <Page pageNumber={1} />
       </Document>
