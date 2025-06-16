@@ -78,13 +78,13 @@ const Command: React.FC<CommandProps> = () => {
       setInputValue(commandHistory[newIndex]);
     }
     
-    //also add the command of entering enter button. 
+    // not necessery but for making more interactive.
     else if (e.key === 'Enter') {
       e.preventDefault();
       executeCommand();
     }
     
-    //i have add the command of control+k for clearing
+    //thsi is not necessery but i have add for more interactivity.
     else if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
       e.preventDefault();
       clearTerminal();
@@ -125,7 +125,7 @@ const Command: React.FC<CommandProps> = () => {
         </dl>
       </div>
     );
-    
+    // destructure property.
     setCommandOutput(prev => [...prev, helpOutput]);
   };
 
