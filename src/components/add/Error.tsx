@@ -12,6 +12,7 @@ interface State {
   hasError: boolean;
 }
 
+// The error will catch by the class component with the oops concept.
 class ErrorBoundary extends Component<Props, State> {
   // default have error no
   state: State = { hasError: false };
