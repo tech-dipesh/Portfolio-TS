@@ -1,5 +1,6 @@
 // this is the librarry forshowing pdf page using the react but worn't work for me i don't know.
-import { Document, Page } from 'react-pdf';
+// import { Document, Page } from 'react-pdf';
+import {Document} from 'react-pdf';
 import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';

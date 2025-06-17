@@ -59,7 +59,7 @@ export default function PdfViewer() {
             onSourceError={handleLoadError}
             loading={<div className="h-96 flex items-center justify-center"><Loader /></div>}
           >
-            {Array.from(new Array(numPages), (el, index) => (
+            {Array.from(new Array(numPages), (index: any) => (
               <Page 
                 key={`page_${index + 1}`}
                 pageNumber={index + 1} 
