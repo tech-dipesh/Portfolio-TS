@@ -15,6 +15,7 @@ const links = [
 ]
 
 export default function Navbar() {
+  // for changing state constantlly
   const [drawerOpen, setDrawerOpen] = useState(false)
   return (
     <header className="w-full bg-white dark:bg-gray-900 shadow-md px-6 py-4">
