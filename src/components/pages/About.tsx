@@ -11,17 +11,19 @@ export default function About() {
         <p>👋 Hi! I’m Dipesh, a computer science student passionate about building apps from start to finish. Right now, I’m diving into tools like React, WebSocket, and TypeScript to create projects that solve real problems.</p>
         <p>💡 What I’m up to:</p>
         <ul className="list-disc list-inside ml-4">
-          <li>Building a real-time chat app (like WhatsApp!) using WebSocket.</li>
+          <li>Building a Data Structure logic for the interview prepration.</li>
+          {/* <li>Building a real-time chat app (like WhatsApp!) using WebSocket.</li> */}
           <li>Created a full-stack Airbnb-style clone with user bookings and listings.</li>
           <li>Learning Docker and Next.js to make my apps faster and more scalable.</li>
-          <li>Solving coding puzzles daily on LeetCode to sharpen my logic.</li>
+          <li>Building a daily streak on GitHub and LeetCode to boost credibility and make a strong impression.</li>
+          {/* <li>Solving coding puzzles daily on LeetCode to sharpen my logic.</li> */}
         </ul>
         <p>🔨 Why I love coding:</p>
-        <p>Every project teaches me something new—whether it’s fixing bugs or designing clean interfaces. I’m currently working on a project with TypeScript, MERN, and Socket.IO.</p>
+        <p>Every project teaches me something new—whether it’s fixing bugs or designing clean interfaces. I’m currently working on a project with TypeScript and MERN stack.</p>
         <p>📫 Let’s connect if:</p>
         <ul className="list-disc list-inside ml-4">
           <li>You’re looking for a motivated intern ready to learn and contribute.</li>
-          <li>You want to geek out about tech, projects, or career tips!</li>
+          <li>You want to geek out about tech, projects and ideas collabration.!</li>
         </ul>
         <p>P.S. I’ve also done the content writing and marketing, so feel free to chat about that too!</p>
         <p className="mt-4 font-semibold">Miscellaneous:</p>
