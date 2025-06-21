@@ -1,6 +1,7 @@
 import { createPortal } from 'react-dom';
 
 // this is for the making a resposive site, this only for the mobile device with custom ui.
+// but as of now this is not a major part which is also not necessery.
 interface MobileDrawerProps {
   open: boolean;
   onClose: () => void;
