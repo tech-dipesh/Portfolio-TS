@@ -86,6 +86,7 @@
 import { useEffect, useState } from "react";
 import "./testimonial.css";
 
+// all review that i got on object of map with the review and author, for making a same template which i've used.
 const testimonials = [
   {
     text: "\"Thank you Dipesh for the work that you provided. I'm happy to have worked with him - he's responsible, good with communication, and works to fulfill the task according to the buyer's requirement. Recommended.\"",
@@ -102,9 +103,11 @@ const testimonials = [
 ];
 
 export default function AllTestimonial() {
+  // state managament with one to track on which review and another is not necessary
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  // change only certain content whic passd on the useeffect parameter 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
@@ -117,6 +120,7 @@ export default function AllTestimonial() {
     return () => clearInterval(interval);
   }, []);
 
+  // i want to remove a handleDotClick, it is suitable for chanign a showing review
   const handleDotClick = (index: number) => {
     if (index === activeIndex || isTransitioning) return;
     setIsTransitioning(true);
