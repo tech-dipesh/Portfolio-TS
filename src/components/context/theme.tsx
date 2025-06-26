@@ -1,3 +1,4 @@
+// these thme localstorage setup i don't think it needed
 import { createContext, useContext, useEffect, useState } from 'react';
 // use hooks for the better theme handling main functionality fo the themee which i imporr on the toggle.tsx
 type ThemeContextType = {
