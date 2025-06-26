@@ -99,7 +99,7 @@
 //     </ErrorBoundary>
 //   );
 // }
-
+// this is a mmost of a spline in build template also some parts which i've edited
 // i am trying to use the threejs but as a beginnner i've hard to work on the threejs so i use the pre build template of spline
 import Spline from '@splinetool/react-spline';
 
