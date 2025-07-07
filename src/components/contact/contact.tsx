@@ -28,6 +28,7 @@ export default function Contact() {
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
       // const response = await fetch('https://formsubmit.co/ajax/dipeshgautambusiness+portfolio@gmail.com', {
+      // as it requires a unique string for where to send a respond.
       const response = await fetch('5f16fd423ec933b4958362304c7e56da', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
