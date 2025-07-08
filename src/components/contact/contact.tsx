@@ -19,6 +19,7 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+
     formState: { errors, isSubmitting },
     reset
   } = useForm<FormData>()
@@ -39,7 +40,7 @@ export default function Contact() {
         reset()
         setTimeout(() => navigate('/'), 2000)
       } else {
-        toast.error('Failed to send message. Please try again.')
+        toast.error('Message is unable to send please try again.')
       }
     } catch {
       toast.error('An error occurred. Please try again.')
@@ -47,7 +48,8 @@ export default function Contact() {
   }
 
   const fieldStyle =
-    'w-full p-3 bg-[#212154] text-white rounded-lg border border-[#3498db] focus:outline-none focus:ring-2 focus:ring-[#8a2be2]'
+    // 'w-full p-3 bg-[#212154] text-white rounded-lg border border-[#3498db] focus:outline-none focus:ring-2 focus:ring-[#8a2be2]'
+    'w-full p-3 bg-[#212154] text-white rounded-lg border border-[#3498db]'
 
   return (
     <div className="flex absolute flex-col min-h-screen w-full bg-[#06063a]">
@@ -63,7 +65,7 @@ export default function Contact() {
             className="w-full bg-[#30339d] p-8 md:p-10 rounded-xl shadow-xl"
           >
             <h2 className="text-4xl font-bold text-[#8a2be2] mb-2">Get in Touch</h2>
-            <p className="text-white mb-8">I'd love to hear from you! Send me a message below.</p>
+            <p className="text-white mb-8">Help me to improve me.</p>
 
             <div className="mb-6">
               <label className="block text-white mb-2 font-medium">Name</label>
@@ -124,6 +126,7 @@ export default function Contact() {
               )}
             </div>
 
+{/* the media queqy which i ad is not able to math with what i plan to make so i try to make a organize but still early stage on teh tailwind which i think might be a issue.. */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <button
                 type="button"
