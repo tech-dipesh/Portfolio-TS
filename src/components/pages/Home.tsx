@@ -4,19 +4,50 @@ import SkillsTestimonials from '../card/Skills';
 import Me from "../../assets/images/developer-ai.webp"
 import Command from '../add/Command';
 import AllTestimonial from '../card/Testimonial';
+import Typed from "typed.js"
+import React from 'react';
+
+
 export default function Home() {
   // my first page when user enter on my website
+
+    const el = React.useRef(null);
+    React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+      typeSpeed: 50,
+    });
+
+      React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+      typeSpeed: 50,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+  
   return (
     <main className="min-h-screen bg-[#06063a] text-white">
     <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between">
+      
+      <div className="App">
+      <span ref={el} />
+    </div>
       <div className="md:w-1/2">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
           className="mt-20 "
         >
-          <h1 className="text-4xl font-bold text-[#8a2be2]">
+          <h1 className="text-4xl font-bold text-purple-500">
             Hi, I'm Dipesh Sharma – Full Stack Developer
           </h1>
         </motion.div>
@@ -24,10 +55,7 @@ export default function Home() {
         <motion.a
           href="https://www.linkedin.com/in/tech-dipesh"
           target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+          // rel="noopener noreferrer"
           className="mt-6 inline-block hover:opacity-80"
           >
           <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8" />
@@ -38,8 +66,8 @@ export default function Home() {
        <div className="md:w-1/2 mt-8 md:mt-0">
       <img 
         src={Me} 
-        className="w-full max-w-xl" 
-        alt="Developer Illustration" 
+        className="w-full mt-2 max-w-xl" 
+        alt="My Image" 
       />
     </div>
     
@@ -50,3 +78,9 @@ export default function Home() {
     </main>
   );
 }
+
+
+// content need to add:
+"Hi, I'm Dipesh Sharma – Full Stack Developer"
+// later image:
+// https://www.linkedin.com/in/tech-dipesh
