@@ -19,7 +19,7 @@ export default function Home() {
     const el = React.useRef(null);
     React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+      strings: ['<i>Hi, </i> Im Dipesh (Dipendra) Sharma - ', '&amp; Full Stack Developer.'],
       typeSpeed: 50,
     });
 
