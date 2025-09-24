@@ -8,15 +8,14 @@ export default function About() {
       </h2>
 {/* my about page little bit about mysef */}
       <div className="mt-6 text-lg leading-relaxed space-y-4">
-        <p>👋 Hi! I’m Dipesh, a computer science student passionate about building apps from start to finish. Right now, I’m diving into tools like React, WebSocket, and TypeScript to create projects that solve real problems.</p>
-        <p>💡 What I’m up to:</p>
+        <p>👋Hi! I’m Dipesh, a computer science student passionate about software development. Right now, I’m working on data structure, JavaScript, C++, React, & Node.js to create projects that solve real problems.</p>
+        <p>💡 What I've done as of now:</p>
         <ul className="list-disc list-inside ml-4">
           <li>Building a Data Structure logic for the interview prepration.</li>
           {/* <li>Building a real-time chat app (like WhatsApp!) using WebSocket.</li> */}
+          <li>Solving over 150+ coding puzzles on LeetCode for the logic building.</li>
           <li>Created a full-stack Airbnb-style clone with user bookings and listings.</li>
-          <li>Learning Docker and Next.js to make my apps faster and more scalable.</li>
-          <li>Building a daily streak on GitHub and LeetCode to boost credibility and make a strong impression.</li>
-          {/* <li>Solving coding puzzles daily on LeetCode to sharpen my logic.</li> */}
+          <li>Trying to do the open-source contribution for the purpose of learning.</li>
         </ul>
         <p>🔨 Why I love coding:</p>
         <p>Every project teaches me something new—whether it’s fixing bugs or designing clean interfaces. I’m currently working on a project with TypeScript and MERN stack.</p>
@@ -32,6 +31,7 @@ export default function About() {
           <li>Quiz Competition Winner</li>
           <li>Wikipedia Writer</li>
         </ul>
+        <p>P.S. I’ve also done the content writing and marketing, so feel free to chat about that too!</p>
       </div>
 
       <div className="mt-auto w-full flex justify-center">
