@@ -10,7 +10,7 @@ const links = [
   { name: 'Projects', path: '/projects' },
   { name: 'Gadgets', path: '/gadgets' },
   { name: 'Contact', path: '/contact' },
-  // { name: 'Resume', path: '/resume' },
+  { name: 'Resume', path: '/resume' },
   { name: 'About', path: '/about' },
 ]
 

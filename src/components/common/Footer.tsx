@@ -41,7 +41,7 @@ const linkGroups = [
 // have to make the separate listing for the styling
 const socials = [
   { name: 'GitHub', icon: Github, url: 'https://github.com/tech-dipesh' },
-  { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com/tech-dipesh' },
+  { name: 'LinkedIn', icon: linkedinIcon, url: 'https://linkedin.com/in/tech-dipesh' },
   { name: 'Twitter', icon: twitterIcon, url: 'https://x.com/tec_dipesh'},
   // { name: 'Discord', icon: discordIcon, url: 'https://discord.com' },
   { name: 'LeetCode', icon: leetcodeIcon, url: 'https://leetcode/u/tech-dipesh/' },
