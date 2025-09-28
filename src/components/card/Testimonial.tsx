@@ -97,7 +97,7 @@ const testimonials = [
     author: "LankyBox",
   },
   {
-    text: '"We collaborated on content creation for a short-term project, focusing on Nepali sports, mainly cricket, to reach a global audience."',
+    text: '"We collaborated on content creation for a short-term project, focusing on Nepali sports, mainly crickets, to reach a global audience."',
     author: "Wicket Nepal - Owner",
   },
 ];

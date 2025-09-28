@@ -6,7 +6,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 export default function Resume() {
   return (
-    <main className="min-h-screen bg-[#06063a] text-white px-6 py-20 flex flex-col items-start">
+    <main className="min-h-screen bg-[#06063a] text-white p-5 flex flex-col items-start">
       <h2 className="text-3xl font-bold text-[#8a2be2] mb-8">Resume</h2>
 
       <div className="w-full">
