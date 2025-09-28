@@ -22,7 +22,7 @@ export default function Resume() {
           <div className="flex items-center justify-between">
             <a
               href="/resume.pdf"
-              download="Dipesh-Sharma-Resume.pdf"
+              download="resume.pdf"
               className="bg-[#3498db] p-3 rounded-xl flex items-center gap-2"
             >
               <div className="w-4 h-4" />
