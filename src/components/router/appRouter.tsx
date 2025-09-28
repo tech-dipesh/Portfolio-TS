@@ -7,7 +7,7 @@ import NotFound from '../add/notfound.tsx';
 import Helmet from "react-helmet"
 const Home = lazy(() => import('../pages/Home'));
 const Projects = lazy(() => import('../pages/Projects'));
-const Resume = lazy(() => import('../pages/Resume'));
+const Resume = lazy(() => import('../resume/Resume.tsx'));
 const Contact = lazy(() => import('../contact/contact.tsx'));
 const Gadgets = lazy(() => import('../pages/Gadgets'));
 const Blogs = lazy(() => import('../pages/Blogs'));

@@ -73,7 +73,7 @@ export default function Footer() {
 
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#3498db]">Connect</h3>
+            <h3 className="text-lg font-semibold mb-4 text-[rgb(52,152,219)]">Connect</h3>
             <div className="grid grid-cols-2 gap-4">
               {socials.map((social) => (
                 <a
