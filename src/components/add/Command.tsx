@@ -2,9 +2,7 @@ import React, { useState, useEffect, useRef, JSX } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Command.css';
 
-interface CommandProps {
-  // I will later add the props
-}
+type CommandProps = unknown
 
 const Command: React.FC<CommandProps> = () => {
   // multiple states
