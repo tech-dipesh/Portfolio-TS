@@ -38,9 +38,9 @@ const Command: React.FC<CommandProps> = () => {
     // Show welcome message
     setCommandOutput([
       <div key="welcome" className="m-2 text-2xl">
-        <h3 className="message-text text-3xl">Welcome to Dipesh Command. Pleased to have you here, fellow developer.</h3>
+        <h3 className="message-text my-2.5 font-light  text-3xl">Welcome to Dipesh Command. Pleased to have you here, fellow developer.</h3>
         <h4 className="message-text">
-          Type <span className="help-text text-[#00ffab]">'help'</span> to view a list of available commands.
+          Type <span className="help-text text-lg font-nomrl    text-green-400">'help'</span> to view a list of available commands.
         </h4>
       </div>
     ]);
@@ -101,9 +101,9 @@ const Command: React.FC<CommandProps> = () => {
   const displayCommandOutput = (command: string) => {
     setCommandOutput(prev => [
       ...prev,
-      <div key={`input-${commandHistory.length}`} className="input-container">
-        <span className="input-label">&gt;</span>
-        <span className="input-command">{command}</span>
+      <div key={`input-${commandHistory.length}`} className="flex flex-row items-center py-1.5">
+        <span className="text-yelow-400 font-bold mr-2.5">&gt;</span>
+        <span className="w-full py-1.5 border-none outline-none bg-transparent text-white font-normal text-base font-mono">{command}</span>
       </div>
     ]);
   };
@@ -197,18 +197,18 @@ const Command: React.FC<CommandProps> = () => {
 `}
       </pre>
       
-      <div ref={outputRef} className="command-output-container">
+      <div ref={outputRef} className="command-output-container my-4 flex-grow overflow-y">
         {commandOutput}
       </div>
       {/* showing what user put */}
-      <div className="input-container">
+      <div className="flex flex-row item-center py-1.5">
         <label htmlFor="command" className="input-label">&gt;</label>
         <input
           ref={inputRef}
           type="text"
           id="command"
           name="command"
-          className="input-command input-text"
+          className="w-full py-1.5 border-none outline-none bg-transparent text-white font-normal text-base font-mono input-text"
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}

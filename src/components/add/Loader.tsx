@@ -1,9 +1,9 @@
-import { Infinity } from 'ldrs/react';
+import { Infinity as InfinityLoader } from 'ldrs/react';
 
 export default function Loader() {
   return (
     <div className="fixed top-1/2 left-2/4 -translate-x-1/2 -translate-y-1/2">
-      <Infinity
+      <InfinityLoader
         size={200}
         stroke={4}
         strokeLength={0.15}
