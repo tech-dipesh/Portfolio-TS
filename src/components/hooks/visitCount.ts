@@ -21,7 +21,7 @@ export default function useVisitorCounter(): number {
       window.localStorage.setItem('visitCount', String(newCount));
       sessionStorage.setItem('hasVisited', 'true');
     }
-  }, []);
+  }, [visits]);
 
   useEffect(() => {
     // counting from 0 to that count per 16 ms. and it wil lcomplete on the 2 sec.

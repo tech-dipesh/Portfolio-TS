@@ -37,10 +37,10 @@ const Command: React.FC<CommandProps> = () => {
 
     // Show welcome message
     setCommandOutput([
-      <div key="welcome" className="introduction">
-        <h3 className="message-text">Welcome to Dipesh Command. Pleased to have you here, fellow developer.</h3>
+      <div key="welcome" className="m-2 text-2xl">
+        <h3 className="message-text text-3xl">Welcome to Dipesh Command. Pleased to have you here, fellow developer.</h3>
         <h4 className="message-text">
-          Type <span className="help-text">'help'</span> to view a list of available commands.
+          Type <span className="help-text text-[#00ffab]">'help'</span> to view a list of available commands.
         </h4>
       </div>
     ]);
@@ -181,8 +181,8 @@ const Command: React.FC<CommandProps> = () => {
   
 
   return (
-    <div className="terminal-container p-5  text-lightgray h-screen bg-gray-800 font-mono w-full mb-20" onClick={focusInput}>
-      <pre className="ascii-name">
+    <div className="terminal-container  cursor-text flex flex-col p-5  text-lightgray h-screen bg-gray-800 font-mono w-full mb-20" onClick={focusInput}>
+      <pre className="text-yellow-400 mt-2">
 {`    ██████  ██ ██████  ███████ ███████ ██   ██                              
     ██   ██ ██ ██   ██ ██      ██      ██   ██                              
     ██   ██ ██ ██████  █████   ███████ ███████                              

@@ -1,39 +1,14 @@
 
-/* this is the main terminal*/
-.terminal-container {
-  /* color: #d3d3d3; */ 
-  /* font-family: 'IBM Plex Mono', monospace; */
-  /* height: 100vh; */
-  /* padding: 20px; */
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  cursor: text;
-}
-
-/* Dipesh in unique way */
-.ascii-name {
-  color: #fbcb0a;
-  font-size: 0.7vw;
-  margin-top: 15px;
-  line-height: 1;
-}
-
-.introduction {
-  margin: 20px 0;
-}
-
-.message-text {
-  font-size: 16px;
-  font-weight: 300;
-  margin: 10px 0;
-}
+  .message-text {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 10px 0;
+  }
 
 .help-text {
   font-size: 17px;
   font-weight: 400;
-  color: #00ffab;
+  /* color: #00ffab; */
 }
 
 /* this styling showing output */
@@ -118,8 +93,3 @@
 *, *::before, *::after {
   cursor: inherit;
 }
-
-/* *::selection {
-  background-color: #00ffab;
-  color: #2c3539;
-} */

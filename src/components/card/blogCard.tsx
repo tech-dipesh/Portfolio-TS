@@ -1,5 +1,5 @@
 
-// I have add what types which we need for the showing all blogs
+// Enums type.
 export type Blog = {
   title: string;
   description: string;
@@ -7,7 +7,7 @@ export type Blog = {
   date: string;
 };
 
-// ind blogs
+// Blogs types
 export function BlogCard({
   title,
   description,

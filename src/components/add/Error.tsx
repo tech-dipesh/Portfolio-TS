@@ -14,7 +14,7 @@ interface State {
 
 // The error will catch by the class component with the oops concept.
 class ErrorBoundary extends Component<Props, State> {
-  // default have error no
+  // in default when successfull request will be true.
   state: State = { hasError: false };
 
   // if the error catch by browser error exist

@@ -23,21 +23,21 @@ const SkillsTestimonials = () => {
   // stored skilsl on the array, whiich i can access by foreach or map
   const skills = [
     { name: "JavaScript", percent: "92%", logo: Javascript },
+    { name: "C++", percent: "90%", logo: Cpp },
     { name: "TypeScript", percent: "80%", logo: TypeScript },
     { name: "React (Library)", percent: "80%", logo: React },
     { name: "Node.js", percent: "88%", logo: NodeJs },
-    { name: "MongoDb", percent: "75%", logo: MongoDB },
+    { name: "MongoDb", percent: "70%", logo: MongoDB },
     { name: "Express.Js", percent: "75%", logo: Express },
     { name: "Next.js", percent: "70%", logo: Nextjs },
     { name: "Socket.IO", percent: "60%", logo: SocketIo },
     { name: "Git", percent: "80%", logo: Git },
-    { name: "Docker", percent: "50%", logo: Docker },
-    { name: "API", percent: "90%", logo: API },
+    { name: "Docker", percent: "26%", logo: Docker },
+    { name: "API", percent: "72%", logo: API },
     { name: "MYSql", percent: "65%", logo: MySql },
-    { name: "C++", percent: "80%", logo: Cpp },
     { name: "Figma", percent: "65%", logo: Figma },
     { name: "Notion", percent: "75%", logo: Notion },
-    { name: "Github", percent: "80%", logo: GitHub },
+    { name: "Github", percent: "95%", logo: GitHub },
   ];
 
 
