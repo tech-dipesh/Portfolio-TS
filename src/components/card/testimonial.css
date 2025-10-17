@@ -1,0 +1,32 @@
+/* This is only for the mobile friendly i don't need nothing much */
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.5rem !important;
+  }
+  
+  .testimonial-text {
+    font-size: 1rem !important;
+    padding-left: 0.5rem !important;
+  }
+  
+  .quote-icon {
+    left: -0.5rem !important;
+    font-size: 4rem !important;
+    top: -1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: 1rem !important;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9rem !important;
+    padding-left: 0 !important;
+  }
+  
+  .testimonial-author {
+    font-size: 1rem !important;
+  }
+}
